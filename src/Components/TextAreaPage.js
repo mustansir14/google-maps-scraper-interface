@@ -13,6 +13,8 @@ function TextAreaPage() {
   const [loading, setLoading] = useState(false)
   const excelFileName = 'Data.xlsx';
 
+  const { REACT_APP_BACKEND_URL } = process.env;
+
   const handleTextChange = (event) => {
     setText(event.target.value);
   };
@@ -25,7 +27,7 @@ function TextAreaPage() {
 
     try {
     const response = await axios
-      .get('https://google-maps-scraper-btyra.ondigitalocean.app', { params })
+      .get(REACT_APP_BACKEND_URL, { params })
     const responseData = response.data.results.map((result) => ({ Query: query, ...result  }))
     setJsonData([...newJsonData, ...responseData]);
     newJsonData = [...newJsonData, ...responseData]
@@ -41,6 +43,7 @@ function TextAreaPage() {
   };
 
   const processText = async () => {
+    setQueryCount(0)
     setLoading(true)
     setQueryProcessFlag(true);
     const queries = text.split('\n');
