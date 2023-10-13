@@ -1,0 +1,33 @@
+/* src/TextAreaPage.css */
+.text-area-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 5%;
+  }
+  
+  .custom-textarea {
+    width: 80%;
+    height: 200px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5%;
+  }
+  
+  .process-button {
+    background-color: #3498db;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .process-button:hover {
+    background-color: #217dbb;
+  }
+  
