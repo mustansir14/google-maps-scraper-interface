@@ -46,7 +46,7 @@ function TextAreaPage() {
     setQueryCount(0)
     setLoading(true)
     setQueryProcessFlag(true);
-    const queries = text.split('\n');
+    const queries = text.trim().split('\n').filter((value) => value.trim() !== "");
     setQueries(queries)
     setJsonData([]);
     let newJsonData = [];
